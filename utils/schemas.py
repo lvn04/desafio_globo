@@ -1,4 +1,4 @@
-from pyspark.sql.types import (StructType, StructField, StringType, TimestampType, ArrayType, DoubleType)
+from pyspark.sql.types import (StructType, StructField, StringType, TimestampType, ArrayType)
 
 people = StructType([
         StructField("birth_year", StringType(), True),
