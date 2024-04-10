@@ -117,24 +117,43 @@ Projeto destinado a avaliar as habilidades técnicas de um engenheiro de dados e
  | url | string | 
 
 #### vehicles
- | cargo_capacity | string | 
- | consumables | string | 
- | cost_in_credits | string | 
- | created | timestamp | 
+ |Column          | Data Type |
+ -----------------------------|
+ | cargo_capacity | string    |
+ -----------------------------| 
+ | consumables    | string    |
+ -----------------------------| 
+ | cost_in_credits| string   |
+ -----------------------------| 
+ | created | timestamp        |
+ -----------------------------| 
  | crew | string | 
+ -----------------------------|
  | edited | timestamp | 
+ -----------------------------|
  | films | array | 
  |    | element | string | 
+ -----------------------------|
  | length | string | 
+ -----------------------------|
  | manufacturer | string | 
- | max_atmosphering_speed | string | 
+ -----------------------------|
+ | max_atmosphering_speed | string |
+ -----------------------------| 
  | model | string | 
+ -----------------------------|
  | name | string | 
+ -----------------------------|
  | passengers | string | 
+ -----------------------------|
  | pilots | array | 
  |    | element | string | 
+ -----------------------------|
  | url | string | 
+ -----------------------------|
  | vehicle_class | string | 
+ -----------------------------|
+ 
 
 #### starships
  | MGLT | string | 
