@@ -8,7 +8,7 @@
   - [Layers](#layers)
   - [Catálogo de Dados](#catálogo-de-dados)
   - [Output Analytics](#output-analytics)
-  - [Links Úteis](#links-úteis)
+  - [Links úteis e considerações](#links-úteis-e-considerações)
 
 
 &nbsp;
@@ -279,7 +279,7 @@ Projeto destinado a avaliar as habilidades técnicas de um engenheiro de dados e
 | 6          | Return of the Jedi     | Twi'lek         | 1               |
 |
 
-
+&nbsp;
 ## Links úteis e considerações
 
 * Os dados estão armazenados localmente no repositório, porém o ideal seria armazena-los em um banco de dados ou storage cloud, aqui estamos realizando apenas uma representação.
