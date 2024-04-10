@@ -1,4 +1,4 @@
-from pyspark.sql.types import (StructType, StructField, StringType, TimestampType, ArrayType)
+from pyspark.sql.types import (StructType, StructField, StringType, TimestampType, ArrayType, IntegerType)
 
 people = StructType([
         StructField("birth_year", StringType(), True),
@@ -41,7 +41,7 @@ films = StructType([
     StructField("created", TimestampType(), True),
     StructField("director", StringType(), True),
     StructField("edited", TimestampType(), True),
-    StructField("episode_id", StringType(), True),
+    StructField("episode_id", IntegerType(), True),
     StructField("opening_crawl", StringType(), True),
     StructField("planets", ArrayType(StringType()), True),
     StructField("producer", StringType(), True),

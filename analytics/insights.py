@@ -45,7 +45,10 @@ def insight_3(spark_sc):
     films = df_films.get_table("curated")
 
     ex_species = explode_column(species, "people")
-    df_join = people.join(ex_species, people.url == ex_species.people, "left").select(species.name.alias("name_species"), people.films, people.name.alias("name_people"))
+    df_join = (people.join(ex_species, people.url == ex_species.people, "left")
+               .select(species.name.alias("name_species"), people.films, people.name.alias("name_people"))
+               .fillna("unknown species", subset=["name_species"])
+               )
 
     ex_df_join = explode_column(df_join, "films")
     df_final = (ex_df_join.join(films, ex_df_join.films == films.url, "left")
