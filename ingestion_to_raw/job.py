@@ -2,7 +2,7 @@ from pyspark.sql import SparkSession
 from utils.schemas import schemas
 from utils.sw_class import StarWarsApi
 
-spark = SparkSession.builder.master("local[*]").appName("Desafio_Globo").getOrCreate()
+spark = SparkSession.builder.master("local[*]").appName("Desafio_Globo_ingestion").getOrCreate()
 
 for name in schemas.keys():
 
