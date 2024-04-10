@@ -15,7 +15,7 @@ class StarWarsApi:
 
     def ingestion_to_raw(self):
         """
-        Função destinada a realizar o processo de consumo dos dados via api e salvar no banco de dados em formato json
+        Funcao destinada a realizar o processo de consumo dos dados via api e salvar no banco de dados em formato json
         """
 
         try:
@@ -57,21 +57,21 @@ class StarWarsApi:
           df = df.na.replace({"N/A": None, "n/a": None})
           df.write.mode("overwrite").parquet(f"{self.local_path}/dados/curated_zone/{self.table_name}/")
           
-          logging.info(f"Dados da tabela {self.table_name} disponíveis na camada curated")
+          logging.info(f"Dados da tabela {self.table_name} disponiveis na camada curated")
 
         except  Exception as e:
           return e
 
     def get_table(self, layer=str, schema=None):
         """
-        funcao destinada a ler dados e retornar um dataframe.
+        Funcao destinada a ler dados e retornar um dataframe.
         """
         if layer not in ("curated", "raw"):
-          raise ValueError(f"Valor inválido para 'layer': {layer}. Valores permitidos: 'curated', 'raw'")
+          raise ValueError(f"Valor invalido para 'layer': {layer}. Valores permitidos: 'curated', 'raw'")
 
         if layer == "raw":
           if schema is None:
-            raise AttributeError(f"Necessário incluir schema da tabela {self.table_name}")
+            raise AttributeError(f"Necessario incluir schema da tabela {self.table_name}")
           else:
             df = self.spark.read.schema(schema[self.table_name]).json(f"{self.local_path}/dados/raw_zone/{self.table_name}.json")
           
